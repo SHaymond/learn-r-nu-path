@@ -1,0 +1,28 @@
+"0","```r
+install.packages(\"DataExplorer\")
+```"
+"1","also installing the dependencies ‘igraph’, ‘networkD3’
+
+trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.5/igraph_1.2.4.1.tgz'
+Content type 'application/x-gzip' length 7470727 bytes (7.1 MB)
+==================================================
+downloaded 7.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.5/networkD3_0.4.tgz'
+Content type 'application/x-gzip' length 188720 bytes (184 KB)
+==================================================
+downloaded 184 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.5/DataExplorer_0.8.0.tgz'
+Content type 'application/x-gzip' length 3419888 bytes (3.3 MB)
+==================================================
+downloaded 3.3 MB
+"
+"1","
+The downloaded binary packages are in
+	/var/folders/7m/mk6q4jzd22594qc8jk2dfk0r0000gn/T//RtmpIcv1Bh/downloaded_packages
+"
+"0","```r
+library(DataExplorer)
+plot_missing(data) ## Are there missing values, and what is the missing data profile?
+```"

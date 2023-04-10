@@ -1,0 +1,8 @@
+"0","```r
+nhanes_data_clean <- mutate(nhanes_data, Gender = as_factor(Gender), 
+                             Race_ethn = as_factor (Race_ethn))
+#we can change more than one column in a single mutate() call
+
+glimpse(nhanes_data_clean) #fct = factor!
+summary(nhanes_data_clean) #look what the summary does now for factors
+```"

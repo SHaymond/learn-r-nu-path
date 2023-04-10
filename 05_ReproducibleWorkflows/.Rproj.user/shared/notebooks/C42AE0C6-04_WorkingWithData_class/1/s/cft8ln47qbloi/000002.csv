@@ -1,0 +1,8 @@
+"0","```r
+```r
+nhanes_data_clean %>% 
+  group_by(Gender) %>%
+  select(-Subject, -Age_months) %>% #remove other numeric columns
+  summarize_if(is.numeric, list(mean = mean, med = median))
+```
+```"

@@ -1,0 +1,19 @@
+"0","```r
+```r
+# USED ON A LIST
+mk8_list$racer # returns elements from the racer item of the list
+```
+```"
+"1","[1] \Mario\          \Princess Peach\ \Wario\         
+[4] \Baby Luigi\    
+"
+"0","```r
+```r
+# USED ON A DATAFRAME
+clarity <- diamonds$clarity # returns elements from the clarity column
+head(clarity)
+```
+```"
+"1","[1] SI2  SI1  VS1  VS2  SI2  VVS2
+Levels: I1 < SI2 < SI1 < VS2 < VS1 < VVS2 < VVS1 < IF
+"

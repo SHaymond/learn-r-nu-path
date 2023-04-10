@@ -1,0 +1,15 @@
+"0","my_data <- read_csv(file = ""data/NHANES_FeMarkers_3to5y.csv"")"
+"2","Parsed with column specification:
+cols(
+  Subject = [32mcol_double()[39m,
+  Gender = [32mcol_double()[39m,
+  Age_months = [32mcol_double()[39m,
+  Race_ethn = [32mcol_double()[39m,
+  Ft_ngdL = [32mcol_double()[39m,
+  Hgb_gdL = [32mcol_double()[39m,
+  MCV_fL = [32mcol_double()[39m,
+  Fe_ugdL = [32mcol_double()[39m,
+  TIBC_ugdL = [32mcol_double()[39m,
+  TfSat_pct = [32mcol_double()[39m
+)
+"

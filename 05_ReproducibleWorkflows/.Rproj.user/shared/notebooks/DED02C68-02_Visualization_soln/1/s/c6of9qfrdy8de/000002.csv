@@ -1,0 +1,4 @@
+"0","```r
+ggplot(nhanes_fe, aes(x = Fe_ugdL, y = TfSat_pct)) +
+  geom_smooth()
+```"

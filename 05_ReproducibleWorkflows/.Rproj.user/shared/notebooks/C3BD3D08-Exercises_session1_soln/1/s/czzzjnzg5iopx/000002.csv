@@ -1,0 +1,4 @@
+"0","install.packages(\"sas7bdat\")
+library(sas7bdat)
+
+sas_data <- read.sas7bdat(\"SAS_test.sas7bdat\")"

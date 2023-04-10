@@ -1,0 +1,4 @@
+"0","```r
+nhanes_males <- filter(nhanes_data_clean, Gender == 1) 
+#does the number of rows match our summary for number of Gender = 1?
+```"

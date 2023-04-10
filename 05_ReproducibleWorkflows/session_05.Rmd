@@ -1,0 +1,41 @@
+---
+title: "session_05"
+author: "sh"
+date: "11/2/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+
+This code performs data cleaning and visualization on a data set ...
+
+**this is important, so it's bold**
+
+```{r data read, message = FALSE}
+nhanes <- read_csv("data/NHANES_FeMarkers_3to5y.csv")
+```
+
+
+
+_This is a summary table._
+```{r table}
+summary(nhanes)
+```
+
+
+There are `r nrow(nhanes)` observations in this dataset. The minimum hemoglobin value is `r min(nhanes$Hgb_gdL)`.  
+
+
+Plot of Transferrin saturation vs iron.   
+```{r plot}
+ggplot(nhanes, aes(x = Fe_ugdL, y = TfSat_pct)) +
+  geom_point()
+```
+
+
+
+

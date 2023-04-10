@@ -1,0 +1,6 @@
+"0","```r
+names(my_df)
+dim(my_df)
+nrow(my_df)
+ncol(my_df)
+```"

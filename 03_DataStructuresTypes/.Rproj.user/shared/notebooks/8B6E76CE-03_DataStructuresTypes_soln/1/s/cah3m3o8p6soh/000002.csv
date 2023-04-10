@@ -1,0 +1,9 @@
+"0","```r
+## A SOLUTION
+our_faves <- data.frame(Name = c(\"Shannon\", \"Kendall\", \"Nathan\"),
+                        Color = c(\"blue\", \"orange\", \"red\"),
+                        Number = c(6, 46, 64),
+                        Fun = c(TRUE, TRUE, FALSE))
+our_faves
+
+```"

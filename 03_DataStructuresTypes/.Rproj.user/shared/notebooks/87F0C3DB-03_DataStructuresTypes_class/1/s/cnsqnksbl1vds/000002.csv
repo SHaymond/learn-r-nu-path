@@ -1,0 +1,7 @@
+"0","```r
+# can name the columns
+my_df <- data.frame(numbers = c(1, 2, 3, 4), 
+                    letters = c(\"A\",\"B\",\"C\", \"D\"), 
+                    logics = c(FALSE, TRUE, FALSE, FALSE)) 
+my_df
+```"

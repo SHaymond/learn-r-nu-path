@@ -1,0 +1,8 @@
+"0","```r
+HbA1c_num <- as.numeric(HbA1c) #did you get a warning? 
+class(HbA1c_num) 
+HbA1c_num
+mean(HbA1c_num, na.rm = TRUE) 
+#more on NAs later, but we're omitting them from the calculation here
+
+```"

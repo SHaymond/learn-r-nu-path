@@ -1,0 +1,6 @@
+"0","```r
+HbA1c <- c(\">14\", 8.7, 5, 6.3, 7.1, \"Test Cancelled\") # create our vector of values
+mean(HbA1c, na.rm = TRUE) # calculate the mean of the numeric values
+class(HbA1c)
+
+```"

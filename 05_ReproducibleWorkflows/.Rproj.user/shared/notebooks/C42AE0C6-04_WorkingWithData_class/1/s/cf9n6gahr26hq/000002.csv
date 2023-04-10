@@ -1,0 +1,7 @@
+"0","```r
+```r
+nhanes_data_clean <- nhanes_data_clean %>%
+                mutate(testing_TAT = difftime(Time_finished, Collected_t, 
+                                              units = \mins\))
+```
+```"

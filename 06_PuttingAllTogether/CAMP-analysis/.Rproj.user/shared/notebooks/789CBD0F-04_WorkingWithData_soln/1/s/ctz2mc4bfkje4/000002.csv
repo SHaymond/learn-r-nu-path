@@ -1,0 +1,4 @@
+"0","```r
+nhanes_data_demo <- select(nhanes_data_demo, -Race_ethn) 
+#see the change in your environment?
+```"

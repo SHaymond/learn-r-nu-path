@@ -1,0 +1,6 @@
+"0","```r
+ggplot(nhanes_fe, aes(x = Race_ethn)) +
+  geom_bar(aes(fill = Gender), position = \"dodge\") +
+  labs(x = \"\") +
+  coord_flip()
+```"

@@ -1,0 +1,7 @@
+"0","```r
+## A SOLUTION
+
+my_dataset <- Theoph
+head(my_dataset, 3)
+
+```"

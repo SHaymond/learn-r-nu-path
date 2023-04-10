@@ -1,0 +1,8 @@
+"0","```r
+nhanes_data_clean %>% 
+  group_by(Gender) %>%
+  summarize(mean_Ft = mean(Ft_ngdL), 
+            max_Ft = max(Ft_ngdL), 
+            min_Ft = min(Ft_ngdL),
+            n = n())
+```"

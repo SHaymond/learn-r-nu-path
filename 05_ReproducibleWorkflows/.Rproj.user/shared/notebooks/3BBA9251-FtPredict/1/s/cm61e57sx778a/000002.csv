@@ -1,0 +1,6 @@
+"0","```r
+data <- select(demo.Ft.CBC, seqn, riagendr, ridagemn, ridreth1, lbdfer, lbxwbcsi, lbxlypct, lbxmopct, lbxnepct, lbxeopct, lbxbapct, lbdlymno, lbdmono, lbdneno, lbdeono, lbdbano, lbxrbcsi, lbxhgb, lbxhct, lbxmcvsi, lbxmc, lbxrdw, lbxpltsi, lbxmpsi)
+data$riagendr <- as.factor(data$riagendr)
+data$ridreth1 <- as.factor(data$ridreth1)
+          
+```"

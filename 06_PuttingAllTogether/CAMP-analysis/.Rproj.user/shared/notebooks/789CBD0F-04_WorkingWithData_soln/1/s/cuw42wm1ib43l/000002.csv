@@ -1,0 +1,4 @@
+"0","```r
+glimpse(nhanes_data)
+# see number of rows and columns, column names and data type - do all make sense?
+```"

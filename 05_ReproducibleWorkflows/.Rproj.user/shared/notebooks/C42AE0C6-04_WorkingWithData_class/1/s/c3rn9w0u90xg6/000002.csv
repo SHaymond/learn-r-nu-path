@@ -1,0 +1,12 @@
+"1","
+
+|Data Type |Examples                                                |Uses               |
+|:---------|:-------------------------------------------------------|:------------------|
+|numeric   |-0.2, 1, 56.890                                         |math               |
+|integer   |1, 34, 100                                              |math               |
+|character |'Hello there', 'Yes', '1', 'TRUE'                       |notes, text, names |
+|factor    |'Yes', 'No', '1', '2'                                   |categorization     |
+|logical   |TRUE, FALSE                                             |logic statements   |
+|complex   |1+3i, 0+1i                                              |complex math       |
+|date-time |2017-09-01, 07/04/1980, 2013-07-24 23:55:26, 1565313540 |dates and times    |
+"

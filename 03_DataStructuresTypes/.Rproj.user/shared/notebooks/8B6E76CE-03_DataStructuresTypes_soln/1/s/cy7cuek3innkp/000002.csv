@@ -1,0 +1,8 @@
+"0","```r
+data(package = .packages(all.available = TRUE))
+
+# let's use the very popular diamonds data set from gglplot2
+my_next_data <- diamonds 
+head(my_next_data)
+
+```"

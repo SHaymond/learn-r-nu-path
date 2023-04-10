@@ -1,0 +1,115 @@
+---
+title: |
+  | WELCOME
+subtitle: "| NU Pathology LearnR! Fall 2020 \n| Series Overview\n"
+output:
+  html_document:
+    theme: cosmo
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: yes
+  word_document:
+    toc: yes
+---
+
+```{r, include = FALSE}
+#install.packages("kableExtra")
+library(tidyverse)
+library(kableExtra)
+```
+
+
+Welcome to NU Pathology Learn R! series, session overview! This outlines the plans for the multi-week series. 
+
+```{r, echo = FALSE}
+# All defaults
+knitr::include_graphics("images/overview.png")
+```
+Each 2 hour session will be conducted via Zoom and will include instruction with interactive coding examples and quizzes. Between sessions there will be opportunities to practice and enhance your `R` skills through exercises.   
+
+## Requirements  
+ - `R` installed
+ - RStudio installed
+
+ 
+## Useful resources  
+ - Cheatsheets  <https://www.rstudio.com/resources/cheatsheets/>
+ - R for Data Science book <https://r4ds.had.co.nz/>
+
+
+  
+## NU Pathology Learn R! Series Objectives
+ - Discuss best practices for reproducible data analyses.  
+ - Write reproducible `R` code for data preparation, analysis, and visualization.  
+ - Create sharable, customized reports using `R`.  
+ - Perform basic troubleshooting of `R` coding errors.    
+
+## Session Schedule
+ - Session 1 **Introduction R/RStudio/R Notebooks**
+ - Session 2 **Data Visualization**
+ - Session 3 **Data Structures and Types**
+ - Session 4 **Working with Data**
+ - Session 5 **Reproducible Workflows and Sharing Analyses/Results**
+ - Session 6 **Putting it All Together**
+  
+
+## Lesson Objectives  
+### Lesson: Introduction to R/RStudio/R Notebooks
+ - Describe `R`, RStudio, and R Notebooks.
+ - Navigate around the key features of RStudio.
+ - Interact with `R` by writing and executing code and reviewing output.
+ - Manage your `R` environment.
+ - Discuss concepts of base `R` and its extended packages.
+ - Install and invoke `R` packages.
+ - Seek help for questions or troubleshooting.
+
+### Lesson: Data Visualization with `ggplot2`
+ - Create publication-quality graphics using the `ggplot2` package.
+ - Describe what types of customizations are possible with `ggplot2`.
+ - Discuss `ggplot2` syntax and components.
+ - Save plots in different output formats.
+
+### Lesson: Data Structures and Types
+ - Read data into `R`.
+ - Compare/contrast the basic data types in `R`.
+ - Describe the concept of data type coercion.
+ - Discuss how to represent categorical information.
+ - Create new data files.
+
+### Lesson: Working with Data
+ - Change the format of data.
+ - Manipulate data and data frames.
+ - Subset data using base `R` syntax and `tidyverse` functions.
+ - Create quick summaries of data.
+ - Discuss how to handle missing data or NA values.
+ - Apply special functions to work with dates.
+ - Apply special functions to work with text data.
+ - Apply special functions to work with categorical data.
+
+### Lesson: R Markdown and Reproducible Workflows
+ - Describe the benefits of using R Projects.
+ - Create an R Project and organized file structure.
+ - Generate sharable reports using `R`.
+ - Customize R Markdown output.
+
+### Lesson: Putting it All Together
+ - Utilize skills learned in previous sessions to perform data analysis, visualization, and report creation.
+
+
+## Acknowledgements
+The R community is very collaborative and focused on education and inclusivity of users. Therefore, it is easy to find high quality materials that are generously licensed for open source use. The Lurie Children's Learn R! course was inspired by and derived from the approaches and content available from the following sources:  
+
+ * Garrett Grolemund's Hands On Programming with R book  
+      https://rstudio-education.github.io/hopr/
+ * Hadley Wickham & Garrett Grolemund's R for Data Science book  
+      https://r4ds.had.co.nz/
+ * Amelia McNamara's Introduction to R & RStudio course  
+      https://github.com/AmeliaMN/IntroToR
+ * Jake Thompson's Tidy Data Science Workshop course  
+      https://tidy-ds.wjakethompson.com/
+ * Software Carpentry's R for Reproducible Scientific Analysis course  
+      https://swcarpentry.github.io/r-novice-gapminder/
+ * Dan Holmes, Stephen Master, Will Slade & Janet Simons's Intro to R Workshop  
+ * Shannon Haymond and Kyle Hoenegger's Lurie Learn R! Series
+

@@ -1,0 +1,15 @@
+"0","```r
+```r
+```r
+```r
+# your turn!
+im_piping_hot <- 
+  nhanes_data_clean %>%
+    mutate(Analyst = \Shannon\) %>%
+    filter(Age_months >=48 & Age_months < 60) %>%
+    select(Subject, Fe_ugdL, Age_months, Analyst) %>%
+    arrange(Fe_ugdL)
+```
+```
+```
+```"

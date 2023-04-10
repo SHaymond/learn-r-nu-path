@@ -1,0 +1,10 @@
+"0","```r
+```r
+nhanes_sorted <- arrange(nhanes_data_clean, Age_months)
+head(nhanes_sorted)
+```
+```r
+nhanes_sorted_desc <- arrange(nhanes_data_clean, desc(Age_months))
+head(nhanes_sorted_desc)
+```
+```"

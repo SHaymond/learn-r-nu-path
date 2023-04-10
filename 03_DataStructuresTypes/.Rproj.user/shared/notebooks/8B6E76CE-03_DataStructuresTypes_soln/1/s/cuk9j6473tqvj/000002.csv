@@ -1,0 +1,6 @@
+"0","```r
+## A SOLUTION
+mixed_vector <- c(6, \"times\", TRUE)
+class(mixed_vector)
+
+```"

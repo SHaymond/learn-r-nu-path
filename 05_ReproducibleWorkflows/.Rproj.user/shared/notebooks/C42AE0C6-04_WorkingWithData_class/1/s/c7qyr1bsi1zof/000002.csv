@@ -1,0 +1,50 @@
+"0","```r
+```r
+nhanes_data_clean <- mutate(nhanes_data, Gender = as.factor(Gender), 
+                             Race_ethn = as.factor (Race_ethn))
+#we can change more than one column in a single mutate() call
+glimpse(nhanes_data_clean) #fct = factor!
+```
+```"
+"1","Observations: 295
+Variables: 12
+$ Subject     <dbl> 21046, 21121, 21131, 21208, 21222, 21235, 21251, 21262,…
+$ Gender      <fct> 1, 2, 2, 1, 1, 1, 1, 2, 1, 2, 2, 2, 2, 1, 2, 1, 1, 1, 1…
+$ Age_months  <dbl> 52, 56, 49, 53, 46, 52, 52, 47, 37, 49, 50, 59, 37, 37,…
+$ Race_ethn   <fct> 1, 1, 2, 3, 4, 3, 5, 2, 3, 4, 4, 1, 1, 4, 4, 2, 3, 1, 4…
+$ Ft_ngdL     <dbl> 59, 26, 15, 53, 48, 27, 22, 24, 14, 24, 41, 33, 7, 23, …
+$ Hgb_gdL     <dbl> 13.0, 13.3, 12.3, 14.5, 11.4, 12.5, 13.1, 12.7, 13.1, 1…
+$ MCV_fL      <dbl> 78.6, 84.9, 85.3, 84.7, 75.0, 81.1, 86.6, 86.6, 84.2, 8…
+$ Fe_ugdL     <dbl> 17, 81, 55, 92, 57, 48, 103, 59, 36, 15, 54, 44, 76, 72…
+$ TIBC_ugdL   <dbl> 346, 310, 279, 331, 278, 401, 420, 353, 356, 328, 395, …
+$ TfSat_pct   <dbl> 4.9, 26.1, 19.7, 27.8, 20.5, 12.0, 24.5, 16.7, 10.1, 4.…
+$ Collected_t <dttm> 2019-08-08 21:45:00, 2019-08-07 10:47:00, 2019-08-09 1…
+$ Resulted_t  <dbl> 1565313540, 1565186820, 1565393160, 1565068980, 1565254…
+"
+"0","```r
+```r
+summary(nhanes_data_clean) #look what the summary does now for factors
+```
+```"
+"1","    Subject      Gender    Age_months    Race_ethn    Ft_ngdL      
+ Min.   :21046   1:151   Min.   :36.00   1: 74     Min.   :  5.00  
+ 1st Qu.:23626   2:144   1st Qu.:42.00   2: 18     1st Qu.: 19.00  
+ Median :26349           Median :48.00   3: 79     Median : 27.00  
+ Mean   :26150           Mean   :48.32   4:103     Mean   : 31.27  
+ 3rd Qu.:28466           3rd Qu.:55.00   5: 21     3rd Qu.: 38.00  
+ Max.   :31085           Max.   :60.00             Max.   :148.00  
+    Hgb_gdL          MCV_fL         Fe_ugdL      TIBC_ugdL    
+ Min.   :10.60   Min.   :63.70   Min.   : 11   Min.   :263.0  
+ 1st Qu.:12.20   1st Qu.:79.80   1st Qu.: 53   1st Qu.:328.0  
+ Median :12.60   Median :82.90   Median : 73   Median :352.0  
+ Mean   :12.70   Mean   :82.37   Mean   : 76   Mean   :354.4  
+ 3rd Qu.:13.15   3rd Qu.:85.05   3rd Qu.: 95   3rd Qu.:378.5  
+ Max.   :15.00   Max.   :91.20   Max.   :288   Max.   :498.0  
+   TfSat_pct      Collected_t                    Resulted_t       
+ Min.   : 3.00   Min.   :2019-08-05 05:04:00   Min.   :1.565e+09  
+ 1st Qu.:14.90   1st Qu.:2019-08-06 03:39:00   1st Qu.:1.565e+09  
+ Median :20.20   Median :2019-08-07 06:53:00   Median :1.565e+09  
+ Mean   :21.68   Mean   :2019-08-07 10:51:54   Mean   :1.565e+09  
+ 3rd Qu.:27.65   3rd Qu.:2019-08-08 14:56:30   3rd Qu.:1.565e+09  
+ Max.   :71.30   Max.   :2019-08-10 03:18:00   Max.   :1.565e+09  
+"

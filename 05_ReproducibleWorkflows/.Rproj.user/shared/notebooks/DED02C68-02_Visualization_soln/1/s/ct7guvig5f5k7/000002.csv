@@ -1,0 +1,18 @@
+"0","```r
+nhanes_fe <- read_csv(file = \"Data_Files/NHANES_FeMarkers_3to5y.csv\",
+                      col_types = cols(Subject = col_factor(),
+                                       Gender = col_factor(),
+                                       Age_months = col_integer(),
+                                       Race_ethn = col_factor())) %>%
+              mutate(Gender = recode(Gender, 
+                                     `1` = \"Male\", `2` = \"Female\"),
+                     Race_ethn = recode(Race_ethn, 
+                                        `1` = \"Mexican American\", 
+                                        `2` = \"Other Hispanic\",
+                                        `3` = \"Non-Hispanic White\",
+                                        `4` = \"Non-Hispanic Black\",
+                                        `5` = \"Other Race - Including Multi-Racial\"))
+
+glimpse(nhanes_fe) #demographics and lab values
+
+```"

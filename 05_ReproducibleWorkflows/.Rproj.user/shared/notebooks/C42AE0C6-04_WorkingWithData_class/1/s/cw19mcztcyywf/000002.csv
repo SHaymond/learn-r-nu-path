@@ -1,0 +1,11 @@
+"0","```r
+```r
+nhanes_pipe_test <- 
+  nhanes_data_clean %>%
+    mutate(calc_TfSat = round((100*Fe_ugdL/TIBC_ugdL),1)) %>%
+    filter(Gender == 2) %>%
+    select(Subject, calc_TfSat, TfSat_pct) %>%
+    arrange(calc_TfSat)
+head(nhanes_pipe_test)
+```
+```"

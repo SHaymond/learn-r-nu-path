@@ -1,0 +1,4 @@
+"0","```r
+ggplot(nhanes_fe, aes(x = Fe_ugdL, y = TfSat_pct)) +
+  geom_point(aes(color = Race_ethn, shape=Gender), alpha = 0.6, size = 2.5)
+```"

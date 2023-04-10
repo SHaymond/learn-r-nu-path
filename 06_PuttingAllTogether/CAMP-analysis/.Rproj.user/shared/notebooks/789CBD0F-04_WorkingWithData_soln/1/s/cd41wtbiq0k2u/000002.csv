@@ -1,0 +1,4 @@
+"0","```r
+nhanes_4y_males_racesubset <- 
+  filter(nhanes_4y_males, Race_ethn %in% c(\"1\", \"2\", \"3\"))
+```"

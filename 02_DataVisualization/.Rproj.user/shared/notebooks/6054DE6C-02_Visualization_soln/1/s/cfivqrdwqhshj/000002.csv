@@ -1,0 +1,1 @@
+"0","ggsave(""my_plot.png"", width = 5, height = 3.5) #you can specify the type of output, size, and save location"

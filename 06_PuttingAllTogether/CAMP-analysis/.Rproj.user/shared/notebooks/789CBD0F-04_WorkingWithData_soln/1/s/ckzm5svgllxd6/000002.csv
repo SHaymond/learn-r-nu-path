@@ -1,0 +1,4 @@
+"0","```r
+summary(nhanes_data)
+# statistical summary of each column - do all make sense?
+```"

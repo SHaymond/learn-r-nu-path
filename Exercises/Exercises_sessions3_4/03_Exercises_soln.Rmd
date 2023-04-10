@@ -1,0 +1,494 @@
+---
+title: |
+  | EXERCISES
+subtitle: "| NU Pathology LearnR! Fall 2020 \n| Sessions 3-4\n"
+output:
+  html_document:
+    theme: cosmo
+    toc: yes
+    toc_float: yes
+  html_notebook: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(lubridate)
+
+```
+
+---
+
+## DATA STRUCTURES AND TYPES
+
+### PRACTICE: Creating vectors, lists, and dataframes
+(a) Using the code examples and information in the lesson,  
+1. Create a vector of at least 3 words.  
+2. Have R return the length of your vector.  
+
+**Solution**  
+```{r}
+# hint: remember to use "" for text/character objects
+
+my_vector <- c("fun", "learning", "R")
+length(my_vector)
+
+
+```
+
+(b) Describe how lists, vectors, and dataframes are similar and how they are different.  
+**Solution: Vectors are 1-dimensional objects containing a SINGLE data type. Lists are 1-dimensional objects containing more than one data type. Data frames are 2-dimensional objects containing more than one data type. Columns in a data frame contain a single data type (so are vectors), but rows may contain more than one data type. We use different functions to create vectors (c()), lists (list()), and data frames (data.frame()).**     
+
+
+
+(c) Create a list, mk8_list, with the following components:
+ - racer: Mario, Princess Peach, Wario, Baby Luigi  
+ - wt: middle, middle, heavy, light  
+ - speed: 3.75, 3.25, 4.75, 2.25  
+ 
+**Solution**  
+```{r}
+
+mk8_list <- list(racer = list("Mario", "Princess Peach", "Wario", "Baby Luigi"), 
+                 wt = list("middle", "middle", "heavy", "light"),
+                 speed = list(3.75, 3.25, 4.75, 2.25))
+
+
+```
+
+ 
+ (d) Print the list and examine its structure.  
+
+**Solution**  
+```{r}
+
+mk8_list
+
+# can also inspect in Environment tab -- should see a list of 3 lists with 4 components in each
+
+
+```
+
+
+ (e) Create a dataframe, mk8_df, with the same components above. 
+ 
+**Solution**  
+```{r}
+
+# now instead of list(), use data.frame() and c() to create each vector (column)
+
+mk8_df <- data.frame(racer = c("Mario", "Princess Peach", "Wario", "Baby Luigi"), 
+                 wt = c("middle", "middle", "heavy", "light"),
+                 speed = c(3.75, 3.25, 4.75, 2.25))
+
+
+```
+
+  (f) Print the dataframe and examine its structure. How can you find the dimensions of your dataframe?  
+  
+**Solution**  
+```{r}
+
+mk8_df
+
+# various ways to find dimensions -- can also inspect in Environment tab -- should see 3 columns with 4 rows
+dim(mk8_df)
+nrow(mk8_df)
+ncol(mk8_df)
+length(mk8_df)
+```
+
+ (g) Before you run the code below, determine the output and then run the code - were you correct?  What type of structure are you operating on in the chunk below?  
+
+ 
+```{r}
+racer <- c("Mario", "Princess Peach", "Wario", "Baby Luigi")
+racer[2] 
+racer[3:4] 
+
+racer[[2]] 
+```
+
+**Solution** 
+```{r}
+#Type of structure == vector
+
+racer[2] # selects 2nd element
+racer[3:4] # selects elements 3 and 4
+
+racer[[2]] # same behavior as [ ] for a vector, but this changes for lists
+```
+
+ 
+ (h) Similar to above, think about the output for the code below, then run the code - were you correct? What is the data structure of each output for the code below?
+
+```{r}
+one <- mk8_list[1]
+one
+
+mk8_list[2:3] 
+
+two <- mk8_list[[1]] 
+two
+
+mk8_list$racer
+```
+
+
+**Solution**
+```{r}
+#Type of structure == list
+one <- mk8_list[1] # returns a list of the first item of the list
+one
+
+mk8_list[2:3] # returns a list of the 2nd and 3rd items in the list
+
+two <- mk8_list[[1]] # returns the elements of the first item of the list
+two
+
+# notice the difference between one and two in the environment
+```
+ 
+ (i) Finally, let's do the same for a dataframe. Inspect the code, predict the output, and check by running the code. What is the structure of the output for the code below?  
+
+```{r}
+
+mk8_df[1,1] 
+mk8_df[ ,2] 
+mk8_df[2, ] 
+
+mk8_df[[1,2]] 
+mk8_df[[2]] 
+```
+
+ 
+ **Solution**
+```{r}
+
+mk8_df[1,1] # returns element in first row, first column [row, column]
+mk8_df[ ,2] # returns elements in all rows for the second column
+mk8_df[2, ] # returns second row for all columns
+
+mk8_df[[1,2]] # returns element of 1st row, 2nd column
+mk8_df[[2]] # returns elements of 2nd column
+mk8_df$racer
+```
+ 
+ (j) Using the [ ] notation, how would you return the data from the second row in the 2nd and 3rd columns of mk8_df?
+ 
+```{r}
+
+```
+ 
+ **Solution**  
+```{r}
+
+mk8_df[2, 2:3]
+
+
+```
+
+(k) Using the [ ] notation, how would you return the data from rows 1 AND 3 for all columns in mk8_df?
+
+```{r}
+
+```
+
+
+**Solution**  
+```{r}
+
+mk8_df[c(1,3), ]
+
+
+```
+
+
+---
+
+## MODIFYING COLUMNS  
+
+### PRACTICE: Creating or modifying columns  
+Find the data file from Session 2: NHANES_FeMarkers_3to5y_w_Dates.csv  
+Read this into R (using `read.csv()`), saving as variable, nhanes_data.  
+Modify the columns to  
+(a) change the Subject, Gender, and Race_ethn columns to factor class, using factor()  
+(b) change the Age_months column to integer class, using as.integer()  
+(c) change the Resulted_t to datetime class, using as_datetime()  
+
+Create a new column, Hgb_dfct_gdL, for the Hemoglobin deficit:  
+(d) Hgb deficit (g/dL) = 14.0 - patient hgb conc.
+
+Check that your code worked to change the classes of those variables.  
+
+
+```{r}
+
+```
+
+
+**Solution:**  
+```{r, include = FALSE}
+# Load your needed libraries  
+library(tidyverse)
+library(lubridate)
+
+# Read in the NHANES data file, saving as variable, nhanes_data
+# Your file location may be different than the below
+nhanes_data <- read.csv("NHANES_FeMarkers_3to5y_w_Dates.csv")
+
+# Modify existing columns to  
+# (a) change the Subject, Gender, and Race_ethn columns to factor class, using as.factor  
+# (b) change the Age_months column to integer class, using as.integer  
+# (c) change the Resulted_t to datetime, using as_datetime  
+
+# Create a new column, Hgb_dfct_gdL, for the Hemoglobin deficit:  
+# (d) Hgb deficit (g/dL) = 14.0 - patient hgb conc.  
+
+nhanes_data <- nhanes_data %>%
+                  mutate(Subject = factor(Subject),
+                         Gender = factor(Gender), 
+                         Race_ethn = factor(Race_ethn),
+                         Age_months = as.integer(Age_months),
+                         Resulted_t = as_datetime(Resulted_t),
+                         Hgb_dfct_gdL = 14 - Hgb_gdL)
+
+# Check that your code worked to change the classes of those variables.
+glimpse(nhanes_data)
+```
+
+
+### EXTEND: Using helper functions  
+Now that you know about `mutate()`, we'll introduce its 'scoped' variants. These variant `mutate()` functions, suffixed with _if, _at or _all, apply an expression (sometimes several) to all variables within a specified subset. This is super helpful, as it means we can apply the same transformation to multiple columns versus selecting individual columns by name.  
+ - `mutate_all()` affects every variable  
+ - `mutate_at()` affects variables selected with a character vector  
+ - `mutate_if()` affects variables selected with a predicate function  
+*What is a predicate function? A function that returns TRUE or FALSE. In this case, the mutate applies to variables where the predicate function is TRUE.*  
+
+(a) Let's use `mutate_if()` to create a series of columns that transform each of the numeric columns *into a new column* with data that is centered and scaled using the `scale` function. The new column(s) should be named as: orig_colname_scaled (i.e., append "scaled" to original column name). You should get a tibble with 295 obs of 21 variables.  
+*Hint: the syntax for `mutate_if()`: mutate_if(.tbl, .predicate, .funs, ...). The .tbl is your data (tibble), the .predicate is your predicate function (e.g., is.integer), the .funs is the function you want to apply to the selected variables (e.g., as.numeric, mean)*  
+
+```{r}
+
+
+
+```
+
+
+**Solution:**  
+```{r, include = FALSE}
+# predicate function here is.numeric
+# function (.funs) here is scale - have to pass it as a list and can specify to keep original columns and create new with appended text
+nhanes_data_cntscl <- nhanes_data %>%
+                      mutate_if(is.numeric, 
+                                .funs = list(scaled = scale))
+
+```
+
+
+---
+
+## SELECTING, FILTERING, ARRANGING  
+
+### PRACTICE: Creating subsets of data and arranging them   
+
+Use the `%>%` to chain together the following code to create a new subset of the NHANES data set:  
+(a) Select the first 5 columns of your NHANES data set - try using a numeric representation of columns (i.e., 1:2).  
+(b) Filter it for female subjects (i.e., Gender = 2).  
+(c) Arrange it by Race_ethn.  
+
+```{r}
+
+```
+
+
+**Solution:**  
+```{r, include = FALSE}
+sub_nhanes_data <- nhanes_data %>%
+                    select(1:5) %>%
+                    filter(Gender == "2") %>%
+                    arrange(Race_ethn)
+```
+
+
+### EXTEND: Using helper functions and operators  
+`select()`, `filter()`, and `arrange()` also have scoped versions that work like the `mutate()` variants described above.  
+
+As briefly mentioned in class, we can simplify our conditions for filtering ranges of values by using `between()`. Instead of using conditions of x >= left & x <= right, we can use between(x, left, right).  
+
+(a) Use `select_at()` with one of its helpers on your extended NHANES data set from above to select only columns that **DON'T** contain "_scaled".  
+(b) Filter your new data set for rows with a hemoglobin deficit between 0 and 2 g/dL -- use `between()`.  
+(c) Arrange your new data set based on both Hgb_gdL and Ft_ngdL.  
+
+```{r}
+
+```
+
+
+**Solution:**  
+```{r, include = FALSE}
+# select_at syntax: select_at(.tbl, .vars, .funs = list(), ...)
+# vars() or variables to select, given character matching using ends_with() -- the -ends_with("x") means 'do not include the variables that ends with x'
+# view your data to see what the two column arrange specification does -- arranged by Hgb first and then for each value of Hgb, arrange by Ft.
+subset_nhanes_data_cntscl <- nhanes_data_cntscl %>%
+                              select_at(vars(-ends_with("_scaled"))) %>%
+                              filter(between(Hgb_dfct_gdL, 0, 2)) %>%
+                              arrange(Hgb_gdL, Ft_ngdL)
+
+```
+
+
+---
+
+## GROUPING & SUMMARIZING  
+
+### PRACTICE: Grouping data by category and summarizing it 
+
+(a) Create a table that shows the median value and standard deviation of hemoglobin for each age.  
+
+```{r}
+
+```
+
+
+**Solution:**  
+```{r, include = FALSE}
+# use median() to find median and sd() to find sd 
+nhanes_data %>% 
+  group_by(Age_months) %>%
+  summarize(med_Hgb = median(Hgb_gdL),
+            sd_Hgb = sd(Hgb_gdL))
+
+```
+
+
+
+### EXTEND: Using scoped variants to summarize  
+
+Let's use a scoped variant of summarize to extend the summarization you performed above to all numeric columns with little additional code.  
+
+(a) Use `summarize_if()` to create a table that shows the median value and standard deviation of *all numeric* columns for each age.  
+
+(b) How is this different that what you did above using `mutate_if()`?
+
+(c) What scoped variant would you use if you wanted to summarize columns based on matching to a character string?  
+
+```{r}
+
+```
+
+
+**Solution:**  
+```{r, include = FALSE}
+# (a)
+nhanes_data %>% 
+  group_by(Age_months) %>%
+  summarize_if(is.numeric, list(med = median, sd = sd))
+
+# (b)
+# mutate_if() modifies or creates new columns in a data set, but summarize_if() creates a summary table from selected columns. The syntax of the two is similar.
+
+# (c)
+# summarize_at() allows you to apply a set of transformations to columns based on either explicity indicating their name, or by using helper functions (contains(), ends_with(), starts_with(), etc.)
+```
+
+---
+
+## WORKING WITH DATES   
+
+### PRACTICE: Parsing date formats and extracting components  
+
+Which `lubridate` function would you use to parse a character column of dates with each the following formats:  
+(a) "02/28/17 12:01:34"  
+
+
+(b) "June 6, 1997"  
+
+
+(c) "2017-22-12 10:00"  
+
+
+
+Another great thing we learned about `lubridate` is its ability to help us extract different components of dates (e.g., weekday, month, etc.).  
+
+(d) Create a new column, named, weekday, in your NHANES data set that indicates the day of the week the sample was collected. Format the column so the full name of the day is displayed.  
+
+```{r}
+
+```
+
+
+**Solution:**  
+```{r, include = FALSE}
+#(a) 
+a <- "02/28/17 12:01:34" #format is month-day-year hr-min-sec
+mdy_hms(a)
+
+# (b)
+b <- "June 6, 1997"  #format is month-day-year
+mdy(b)
+
+# (c) 
+c <- "2017-22-12 10:00" #format is year-day-month hr-min
+ydm_hm(c)
+
+# wday is the function that finds the weekday for a given datetime
+# label = TRUE provides name vs number and abbr = FALSE provides full name vs abbreviated one
+
+nhanes_data <- nhanes_data %>%
+                mutate(weekday = wday(Collected_t, 
+                                      label = TRUE, abbr = FALSE))
+
+```
+
+### EXTEND: Creating date times from components  
+
+In our previous examples we were given character strings or numerics representing date formats that we could parse. The other way to create a date or datetime object is from combining individual components. The functions `make_date()` and `make_datetime()` help you do this. 
+
+An example of the syntax:
+```{r}
+# to create a datetime of 01-05-2019 09:12:43 EST; all arguments are numeric with exception of tz (time zone)
+make_datetime(year = 2019, 
+              month = 01, 
+              day = 05, 
+              hour = 09, 
+              min = 12, 
+              sec = 43, 
+              tz = "EST")
+```
+
+Try it yourself using the `flights` dataset. This data is in the `nycflights13` package. You will need to install the package and load it. 
+
+(a) Create a new object, flights_data, that is the `flights` dataset.  
+Use the `head()` or `View()` functions to examine your new object.   
+
+(b) Create a new column for flights_data, departure_t, from the individual numeric component columns: year, month, day, hour, min.  
+
+(c) Check that the departure_t column is a datetime class.  
+
+```{r}
+
+
+```
+
+
+**Solution:**  
+```{r, include = FALSE}
+# (a) Create a new object, flights_data, that is the `flights` dataset. # Use the `head()` or `View()` functions to examine your new object.
+
+#install.packages("nycflights13")
+library(nycflights13)
+#head(flights)
+#View(flights)
+
+# (b) Create a new column for flights_data, departure_t, from the 
+# individual components: year, month, day, hour, min. 
+flights_data <- flights %>% 
+  mutate(departure_t = make_datetime(year, month, day, hour, minute))
+
+# (c) Check that the departure_t column is a datetime class.
+class(flights_data$departure_t)
+```
+
+---
+

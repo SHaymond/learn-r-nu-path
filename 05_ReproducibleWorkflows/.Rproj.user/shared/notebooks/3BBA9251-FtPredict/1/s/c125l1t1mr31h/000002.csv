@@ -1,0 +1,78 @@
+"0","```r
+install.packages(\"Hmisc\")
+```"
+"1","also installing the dependencies ‘checkmate’, ‘Formula’, ‘latticeExtra’, ‘acepack’, ‘htmlTable’, ‘viridis’
+
+trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.5/checkmate_1.9.3.tgz'
+Content type 'application/x-gzip' length 738257 bytes (720 KB)
+==================================================
+downloaded 720 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.5/Formula_1.2-3.tgz'
+Content type 'application/x-gzip' length 177499 bytes (173 KB)
+==================================================
+downloaded 173 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.5/latticeExtra_0.6-28.tgz'
+Content type 'application/x-gzip' length 2195491 bytes (2.1 MB)
+==================================================
+downloaded 2.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.5/acepack_1.4.1.tgz'
+Content type 'application/x-gzip' length 81401 bytes (79 KB)
+==================================================
+downloaded 79 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.5/htmlTable_1.13.1.tgz'
+Content type 'application/x-gzip' length 326731 bytes (319 KB)
+==================================================
+downloaded 319 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.5/viridis_0.5.1.tgz'
+Content type 'application/x-gzip' length 1866361 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.5/Hmisc_4.2-0.tgz'
+Content type 'application/x-gzip' length 3081442 bytes (2.9 MB)
+==================================================
+downloaded 2.9 MB
+"
+"1","
+The downloaded binary packages are in
+	/var/folders/7m/mk6q4jzd22594qc8jk2dfk0r0000gn/T//RtmpIcv1Bh/downloaded_packages
+"
+"0","```r
+library(Hmisc)
+```"
+"1","Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+"
+"0","```r
+Ft.sTfR <- sasxport.get(\"data/L06TFR_C.XPT\")
+```"
+"1","Processing SAS dataset L06TFR_C 	 ..
+"
+"0","```r
+CBCdiff <- sasxport.get(\"data/L25_C.XPT\")
+```"
+"1","Processing SAS dataset L25_C 	 ..
+"
+"0","```r
+Fe.TIBC.Sat <- sasxport.get(\"data/L40FE_C.XPT\")
+```"
+"1","Processing SAS dataset L40FE_C 	 ..
+"
+"0","```r
+demos <- sasxport.get(\"data/DEMO_C.XPT\")
+```"
+"1","Processing SAS dataset DEMO_C 	 ..
+"

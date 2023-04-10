@@ -1,0 +1,11 @@
+"0","```r
+```r
+# hint: remember to use \\ for text/character objects
+## Solution
+
+my_vector <- c(\fun\, \learning\, \R\)
+length(my_vector)
+
+
+```
+```"

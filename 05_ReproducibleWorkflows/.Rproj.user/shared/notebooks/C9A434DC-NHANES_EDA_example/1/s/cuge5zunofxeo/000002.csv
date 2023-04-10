@@ -1,0 +1,4 @@
+"0","# will want to facet plots to make small multiple plots, so must get into long format"
+"0","nhanes_fe_long <- nhanes_fe %>%"
+"0","                    pivot_longer(c(age_months, ft_ngd_l:tf_sat_pct), "
+"0","                                 names_to = ""variable"", values_to = ""value"")"

@@ -1,0 +1,8 @@
+"0","```r
+data()
+my_data <- mtcars
+head(my_data) # head shows first 6 rows of data by default
+head(my_data, 10) # now will show 10 rows
+tail(my_data) # tail shows last 6 rows of data
+
+```"

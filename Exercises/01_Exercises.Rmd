@@ -1,0 +1,101 @@
+---
+title:  "EXERCISES"
+subtitle: "| NU Pathology LearnR! Fall 2020 \n| Session 1\n"
+output:
+  html_document:
+    theme: cosmo
+    toc: yes
+    toc_float: yes
+  html_notebook: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#library(tidyverse)
+
+```
+
+---
+
+## INTRO TO R & RSTUDIO
+
+### PRACTICE: Writing R Code 
+(a) Describe what is wrong with the code in the chunk below.   
+
+
+(b) Fix the code to remove errors and use snake case for variables.  
+
+```{r}
+10.mean <- mean(rnorm(10))
+
+This code calculates the mean of a series of random numbers.
+
+```
+
+### PRACTICE: Writing R Code 
+(a) Create a variable, `loc` with the following values: main, WST, NLX, and CD.   
+
+
+(b) Add another value, GLB.  
+
+```{r }
+
+
+
+```
+
+
+  
+### PRACTICE: Loading and Using Packages 
+(a) Identify what is wrong within the following code chunk.  
+
+
+(b) Fix the code to properly load the package.  
+
+```{r, eval = FALSE}
+
+library(lubridate)
+install.packages(lubridate)
+
+```
+
+
+### PRACTICE: Using the help files 
+Use a help file to examine the arguments for `read_csv()`.  
+
+(a) What is the default setting for the skip argument?  
+
+
+
+(b) What does the skip argument do?  
+ 
+
+
+
+### EXTEND: Exploring the realm of available R packages
+This website lists all packages available on CRAN: https://cran.r-project.org/web/packages/available_packages_by_name.html.   
+  
+(a) Using the search function in the Packages tab of RStudio to find packages loaded onto your computer, find and list at least one R package that can be used to read rectangular text files (.csv or .tsv) into R.  
+
+Reads text files, is loaded on my computer:   
+
+
+
+(b) Now use an internet search to find an R package that can be used to read Excel files (.xls or .xlxs), but is not loaded onto your computer:  
+
+Reads Excel files, is NOT loaded on my computer:  
+
+
+  
+Select one of the packages and use its reference manual to find the documentation on the function to read a .xls file.    
+
+(c) Write sample code below that would install the package, load it, and then use a function to read in a .xls file, titled ex1.xls (NOTE: Since there is no such Excel file, this code will not actually work, but is used for demonstrating correct syntax.)  
+
+```{r, eval = FALSE}
+
+
+
+```
+
+---
+

@@ -1,0 +1,28 @@
+"0","```r
+library(dplyr)
+```"
+"1","
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:Hmisc’:
+
+    src, summarize
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+"
+"0","```r
+demo.Ft.join <- inner_join(demos, Ft.sTfR)
+```"
+"1","Joining, by = \"seqn\"
+"
+"0","```r
+demo.Ft.CBC <- inner_join(demo.Ft.join, CBCdiff)
+```"
+"1","Joining, by = \"seqn\"
+"

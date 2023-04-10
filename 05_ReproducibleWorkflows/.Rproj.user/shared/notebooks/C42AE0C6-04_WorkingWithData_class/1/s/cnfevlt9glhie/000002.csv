@@ -1,0 +1,39 @@
+"0","```r
+```r
+summary(nhanes_data)
+```
+```"
+"1","    Subject          Gender        Age_months      Race_ethn    
+ Min.   :21046   Min.   :1.000   Min.   :36.00   Min.   :1.000  
+ 1st Qu.:23626   1st Qu.:1.000   1st Qu.:42.00   1st Qu.:1.500  
+ Median :26349   Median :1.000   Median :48.00   Median :3.000  
+ Mean   :26150   Mean   :1.488   Mean   :48.32   Mean   :2.929  
+ 3rd Qu.:28466   3rd Qu.:2.000   3rd Qu.:55.00   3rd Qu.:4.000  
+ Max.   :31085   Max.   :2.000   Max.   :60.00   Max.   :5.000  
+    Ft_ngdL          Hgb_gdL          MCV_fL         Fe_ugdL   
+ Min.   :  5.00   Min.   :10.60   Min.   :63.70   Min.   : 11  
+ 1st Qu.: 19.00   1st Qu.:12.20   1st Qu.:79.80   1st Qu.: 53  
+ Median : 27.00   Median :12.60   Median :82.90   Median : 73  
+ Mean   : 31.27   Mean   :12.70   Mean   :82.37   Mean   : 76  
+ 3rd Qu.: 38.00   3rd Qu.:13.15   3rd Qu.:85.05   3rd Qu.: 95  
+ Max.   :148.00   Max.   :15.00   Max.   :91.20   Max.   :288  
+   TIBC_ugdL       TfSat_pct      Collected_t                 
+ Min.   :263.0   Min.   : 3.00   Min.   :2019-08-05 05:04:00  
+ 1st Qu.:328.0   1st Qu.:14.90   1st Qu.:2019-08-06 03:39:00  
+ Median :352.0   Median :20.20   Median :2019-08-07 06:53:00  
+ Mean   :354.4   Mean   :21.68   Mean   :2019-08-07 10:51:54  
+ 3rd Qu.:378.5   3rd Qu.:27.65   3rd Qu.:2019-08-08 14:56:30  
+ Max.   :498.0   Max.   :71.30   Max.   :2019-08-10 03:18:00  
+   Resulted_t       
+ Min.   :1.565e+09  
+ 1st Qu.:1.565e+09  
+ Median :1.565e+09  
+ Mean   :1.565e+09  
+ 3rd Qu.:1.565e+09  
+ Max.   :1.565e+09  
+"
+"0","```r
+```r
+# statistical summary of each column - do all make sense?
+```
+```"

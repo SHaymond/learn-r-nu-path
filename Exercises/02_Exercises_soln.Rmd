@@ -1,0 +1,99 @@
+---
+title: "EXERCISES"
+subtitle: "| NU Pathology LearnR! Fall 2020 \n| Session 2\n"
+output:
+  html_document:
+    theme: cosmo
+    toc: yes
+    toc_float: yes
+  html_notebook: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+```
+
+---
+
+## DATA VISUALIZATION
+
+### EXTEND: Using built-in data and quick plots
+You wouldn't fully experience learning plotting with `ggplot2` if you didn't work with the diamonds data set that is built in to `ggplot2`. This data set contains the prices and other attributes of almost 54,000 diamonds. Since the data set is available once you load the `ggplot2` package, you can use `diamonds` as you would any data object and R knows what you mean, as shown in the examples below. You can refer to the data set as `diamonds` or can assign it to a new variable if you like.
+
+```{r}
+summary(diamonds)
+dia <- diamonds
+```
+
+We worked with the `ggplot()` in our session. There is another plotting function in `ggplot2` called `qplot()`. This was designed to allow for a 'quick' plot. We'll experiment with the `qplot()` below to become familiar with it.  
+
+(a) Create a `qplot()` that shows the relationship between price (price) and carat weight (carat) for the `diamonds` data set. (Use help to find out about the syntax and defaults for `qplot()`.)  
+
+(b) Modify your code to ADD a smoothed line with error bars (created by geom "smooth") to the scatterplot (geom "point"). (HINT: You want to 'combine' two geoms here)
+
+(c) Use `qplot()` to create a quick histogram of diamond price.
+
+**Solution**  
+```{r}
+
+qplot(x = carat, y = price, data = diamonds) # by default if x and y supplied - will plot scatterplot (as geom = "point"), can use geom argument to change plot type.
+
+qplot(x = carat, y = price, data = diamonds, geom = c("point","smooth"))
+
+qplot(x = price, data = diamonds)
+```
+
+### PRACTICE: Creating spectacular plots
+
+(a) Use `ggplot()` to create a more sophisticated graph for the `diamonds` data that shows the relationship between price (price) and carat weight (carat) with coloring by the clarity rating (clarity). Adjust the transparency to better see overlapped points.  
+
+**Solution**  
+```{r}
+
+## Both options below work to generate scatterplot of price vs carat weight, colored by clarity rating:
+
+#setting x, y variables locally (i.e., in geom_point):
+ggplot(diamonds) +
+  geom_point(aes(x = carat, y = price, color = clarity), alpha = 0.6) #alpha adjusts transparency - put outside of aes call to apply to all points
+
+#setting x, y variables globally (i.e., in ggplot function call):
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_point(aes(color = clarity), alpha = 0.6)
+```
+
+
+### PRACTICE: Faceting plots
+As we learned, `ggplot2` has several faceting functions to divide plots into subplots based on categorical variable values.  
+
+(a) Modify the plot above: instead of coloring points by the clarity rating, create individual plots for each group using faceting. Experiment with faceting into rows, columns, or a rectangular layout to see the difference and determine which may be best for this visualization.  
+
+(b) Select your favorite version of the faceted plot and modify the scales to be "free". What effect does this have on your plot?  
+
+**Solution**  
+```{r}
+
+# Facet into columns with a single row
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_point() +
+  facet_grid(~clarity)
+
+# Facet into rows with a single column
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_point() +
+  facet_grid(clarity~.)
+
+# Facet into rectangular layout (rows and columns)
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_point() +
+  facet_wrap(~clarity, scales = "free")
+```
+
+
+---
+
+
+
+
+

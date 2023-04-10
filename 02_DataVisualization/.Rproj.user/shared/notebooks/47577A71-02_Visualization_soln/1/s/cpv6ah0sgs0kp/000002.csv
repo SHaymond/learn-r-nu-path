@@ -1,0 +1,8 @@
+"0","```r
+## A SOLUTION
+ggplot(nhanes_fe, aes(x = Fe_ugdL, y = TfSat_pct)) +
+  geom_point(aes(color = Gender), alpha = 0.6, size = 3) +  #change look
+  labs(title = \"My Plot\") + #add the title
+  theme_classic() #change the theme
+
+```"

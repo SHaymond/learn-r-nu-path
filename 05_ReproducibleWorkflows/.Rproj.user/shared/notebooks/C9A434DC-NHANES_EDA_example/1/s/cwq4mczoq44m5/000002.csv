@@ -1,0 +1,8 @@
+"0","cors <- nhanes_fe %>% "
+"0","        select_if(is.numeric) %>%"
+"0","        cor(use = 'pairwise.complete.obs')"
+"0",""
+"0","corrplot(cors, type=""lower"", method=""circle"", addCoef.col=""black"", "
+"0","         number.cex=0.5, tl.cex = 0.75, tl.col = ""black"","
+"0","         diag=FALSE)"
+"0",""

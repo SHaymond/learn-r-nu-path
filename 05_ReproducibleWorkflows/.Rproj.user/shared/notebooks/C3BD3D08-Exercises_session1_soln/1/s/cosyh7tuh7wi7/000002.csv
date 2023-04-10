@@ -1,0 +1,102 @@
+"0","```r
+```r
+# USED ON A VECTOR:
+racer <- c(\Mario\, \Princess Peach\, \Wario\, \Baby Luigi\)
+racer[2] # selects 2nd element
+```
+```"
+"1","[1] \Princess Peach\
+"
+"0","```r
+```r
+racer[3:4] # selects elements 3 and 4
+```
+```"
+"1","[1] \Wario\      \Baby Luigi\
+"
+"0","```r
+```r
+racer[[2]] # same behavior as [ ] for a vector, but this changes for lists
+```
+```"
+"1","[1] \Princess Peach\
+"
+"0","```r
+```r
+# USED ON A LIST:
+mk8_list <- list(racer = c(\Mario\, \Princess Peach\, \Wario\, \Baby Luigi\),
+                wt = c(\middle\, \middle\, \heavy\, \light\),
+                speed = c(3.75, 3.25, 4.75, 2.25))
+one <- mk8_list[1] # returns a list of the first item of the list
+one
+```
+```"
+"1","$racer
+[1] \Mario\          \Princess Peach\ \Wario\         
+[4] \Baby Luigi\    
+"
+"0","```r
+```r
+mk8_list[2:3] # returns a list of the 2nd and 3rd items in the list
+```
+```"
+"1","$wt
+[1] \middle\ \middle\ \heavy\  \light\ 
+
+$speed
+[1] 3.75 3.25 4.75 2.25
+"
+"0","```r
+```r
+two <- mk8_list[[1]] # returns the elements of the first item of the list
+two
+```
+```"
+"1","[1] \Mario\          \Princess Peach\ \Wario\         
+[4] \Baby Luigi\    
+"
+"0","```r
+```r
+# notice the difference between one and two in the environment
+# USED ON A DATAFRAME
+mk8_df <- data.frame(racer = c(\Mario\, \Princess Peach\, \Wario\, \Baby Luigi\),
+                wt = c(\middle\, \middle\, \heavy\, \light\),
+                speed = c(3.75, 3.25, 4.75, 2.25))
+mk8_df[1,1] # returns element in first row, first column [row, column]
+```
+```"
+"1","[1] Mario
+Levels: Baby Luigi Mario Princess Peach Wario
+"
+"0","```r
+```r
+mk8_df[ ,2] # returns elements in all rows for the second column
+```
+```"
+"1","[1] middle middle heavy  light 
+Levels: heavy light middle
+"
+"0","```r
+```r
+mk8_df[2, ] # returns second row for all columns
+```
+```"
+"1","           racer     wt speed
+2 Princess Peach middle  3.25
+"
+"0","```r
+```r
+mk8_df[[1,2]] # returns element of 1st row, 2nd column
+```
+```"
+"1","[1] middle
+Levels: heavy light middle
+"
+"0","```r
+```r
+mk8_df[[2]] # returns elements of 2nd column
+```
+```"
+"1","[1] middle middle heavy  light 
+Levels: heavy light middle
+"

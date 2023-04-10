@@ -1,0 +1,3 @@
+"0","10.mean <- mean(rnorm(10))
+
+This code calculates the mean of a series of random numbers."

@@ -1,0 +1,8 @@
+"0","table1_age <- camp_data_clean %>%"
+"0","            filter(visitc == 0) %>%"
+"0","            group_by(tg) %>%"
+"0","            summarize(age_mean = round(mean(age_rz),1), "
+"0","                      age_sd = round(sd(age_rz),1)) %>%"
+"0","            unite(age_mean_sd, age_mean, age_sd, sep = ""±"") %>%"
+"0","            spread(key = tg, value = age_mean_sd) %>%"
+"0","            mutate(Subgroup = """") "

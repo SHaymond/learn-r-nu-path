@@ -1,0 +1,6 @@
+"0","```r
+ggplot(nhanes_fe, aes(x = Race_ethn)) +
+  geom_bar(aes(fill = Gender)) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +
+  labs(x = \"\") #hides x axis label
+```"

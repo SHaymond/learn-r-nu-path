@@ -1,0 +1,14 @@
+"0","```r
+## SOLUTION
+# (1) change the histogram fill
+ggplot(nhanes_fe, aes(x = Fe_ugdL)) +
+  geom_histogram(aes(fill = Race_ethn), alpha=0.5, position=\"identity\")
+
+
+# (2 & 3) change the histogram to density plot and move the legend
+
+ggplot(nhanes_fe, aes(x = Fe_ugdL)) +
+  geom_density(aes(fill = Race_ethn), alpha=0.5, position=\"identity\") + #new type of geom
+  theme(legend.position = \"bottom\") #legend.position sets location of legend
+
+```"

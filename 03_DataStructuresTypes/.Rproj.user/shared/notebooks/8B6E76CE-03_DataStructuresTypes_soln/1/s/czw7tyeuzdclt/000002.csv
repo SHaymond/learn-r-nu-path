@@ -1,0 +1,8 @@
+"0","```r
+## A SOLUTION
+my_faves <- list(\"shannon\", \"blue\", 6, TRUE)
+
+# with names:
+my_faves <- list(Name = \"Shannon\", Color = \"blue\", Number = 6, Fun = TRUE)
+
+```"

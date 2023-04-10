@@ -1,0 +1,5 @@
+"0","```r
+nhanes_data_demo <- select(nhanes_data_clean, 
+                           Subject, Gender, Age_months, Race_ethn) 
+#see the new object in your environment?
+```"

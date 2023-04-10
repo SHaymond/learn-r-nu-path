@@ -1,0 +1,4 @@
+"0","```r
+ggplot(nhanes_fe, aes(x = Fe_ugdL)) +
+  geom_histogram(aes(fill = Gender), alpha=0.5, position=\"identity\")
+```"

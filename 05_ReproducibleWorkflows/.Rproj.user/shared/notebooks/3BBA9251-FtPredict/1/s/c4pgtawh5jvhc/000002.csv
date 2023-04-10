@@ -1,0 +1,17 @@
+"0","```r
+LRModel <- lm(lbdfer ~ ., # regression formula
+              data=select(data.1to3, -seqn)) # data set
+# Summarize and print the results
+summary(LRModel)
+
+#now try after log-transformation of continuous variables
+#work on this code to only apply log T to select columns without excluding others
+Log.data.1to3 <- mutate_if(select(data.1to3,-lbxbapct, -lbdeono, -lbdbano), 
+                           is.numeric, funs(log(.)))
+
+summary(Log.data.1to3)
+LRModel_logT <- lm(lbdfer ~ ., # regression formula
+              data=select(Log.data.1to3, -seqn)) # data set
+# Summarize and print the results
+summary(LRModel_logT)
+```"

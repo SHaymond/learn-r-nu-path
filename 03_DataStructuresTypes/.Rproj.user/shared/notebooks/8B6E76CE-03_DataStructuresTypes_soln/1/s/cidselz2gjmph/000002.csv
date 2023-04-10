@@ -1,0 +1,6 @@
+"0","```r
+my_list <- list('letters', 1, 2, 3, TRUE, list(\"more letters\", 4, 5, FALSE))
+my_list 
+# gives a clue of how items in a list are indexed
+# useful for when we want to retrieve them individually
+```"

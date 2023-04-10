@@ -1,0 +1,21 @@
+"0","```r
+```r
+nhanes_data <- read_csv(\Data_Files/NHANES_FeMarkers_3to5y_w_Dates.csv\)
+```
+```"
+"1","Parsed with column specification:
+cols(
+  Subject = col_double(),
+  Gender = col_double(),
+  Age_months = col_double(),
+  Race_ethn = col_double(),
+  Ft_ngdL = col_double(),
+  Hgb_gdL = col_double(),
+  MCV_fL = col_double(),
+  Fe_ugdL = col_double(),
+  TIBC_ugdL = col_double(),
+  TfSat_pct = col_double(),
+  Collected_t = col_datetime(format = \\),
+  Resulted_t = col_double()
+)
+"

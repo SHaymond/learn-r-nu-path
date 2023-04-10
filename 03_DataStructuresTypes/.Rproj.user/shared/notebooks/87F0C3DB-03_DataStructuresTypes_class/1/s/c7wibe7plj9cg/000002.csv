@@ -1,0 +1,20 @@
+"0","```r
+# you don't need to understand this code right now, we're more focused on it's output
+
+# create OLS linear regression model for ferritin and iron values from the NHANES iron marker data set
+reg <- lm(Ft_ngdL ~ Fe_ugdL, data = nhanes_fe)
+summary(reg) 
+
+#look at our new variable, reg -- it is a list with 12 elements
+# we can pull out the intercept and slope and the fitted values and the residuals, etc. - these are within the different named elements of the list
+
+# if we want to inspect the coefficients for the linear equation
+reg$coefficients
+
+# we can even get more specific and pull out the intercept and the slope to use them in math operations or other things
+reg$coefficients[1] #gets the intercept
+reg$coefficients[2] #gets the slope
+
+# We'll cover more on how to subset and select out specific elements or parts of data in the next session 
+
+```"

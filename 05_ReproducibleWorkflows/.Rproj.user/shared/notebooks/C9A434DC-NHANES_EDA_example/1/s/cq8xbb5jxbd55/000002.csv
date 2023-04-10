@@ -1,0 +1,2 @@
+"0","knitr::kable(partition(nhanes_fe_skim)$numeric, digits = 2) %>%"
+"0","  kable_styling()"

@@ -1,0 +1,6 @@
+"0","```r
+write_csv(data.1to3, \"Desktop/NHANES_FeMarkers_CBC_1to3y.csv\")
+
+```"
+"1","cannot open file 'Desktop/NHANES_FeMarkers_CBC_1to3y.csv': No such file or directoryError in open.connection(path, \"wb\") : cannot open the connection
+"

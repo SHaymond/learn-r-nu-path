@@ -1,0 +1,47 @@
+"0","```r
+data.noNA <- na.omit(data)
+summary(data.noNA)
+```"
+"1","      seqn       riagendr    ridagemn     ridreth1     lbdfer       
+ Min.   :21006   1: 414   Min.   : 12.0   1: 791   Min.   :   2.00  
+ 1st Qu.:23541   2:2553   1st Qu.: 67.5   2: 112   1st Qu.:  18.00  
+ Median :26064            Median :212.0   3:1061   Median :  32.00  
+ Mean   :26081            Mean   :238.1   4: 868   Mean   :  44.23  
+ 3rd Qu.:28626            3rd Qu.:362.0   5: 135   3rd Qu.:  53.00  
+ Max.   :31118            Max.   :599.0            Max.   :2460.00  
+    lbxwbcsi         lbxlypct        lbxmopct         lbxnepct    
+ Min.   : 2.900   Min.   : 5.00   Min.   : 0.900   Min.   : 2.40  
+ 1st Qu.: 6.000   1st Qu.:26.40   1st Qu.: 5.900   1st Qu.:45.50  
+ Median : 7.400   Median :33.10   Median : 7.200   Median :56.10  
+ Mean   : 7.671   Mean   :35.06   Mean   : 7.483   Mean   :54.16  
+ 3rd Qu.: 9.000   3rd Qu.:42.40   3rd Qu.: 8.600   3rd Qu.:64.00  
+ Max.   :21.600   Max.   :81.30   Max.   :29.400   Max.   :92.30  
+    lbxeopct         lbxbapct       lbdlymno        lbdmono      
+ Min.   : 0.100   Min.   : 0.0   Min.   :0.500   Min.   :0.1000  
+ 1st Qu.: 1.300   1st Qu.: 0.4   1st Qu.:1.900   1st Qu.:0.4000  
+ Median : 2.000   Median : 0.6   Median :2.400   Median :0.5000  
+ Mean   : 2.631   Mean   : 0.7   Mean   :2.614   Mean   :0.5569  
+ 3rd Qu.: 3.250   3rd Qu.: 0.8   3rd Qu.:3.000   3rd Qu.:0.7000  
+ Max.   :20.200   Max.   :17.3   Max.   :9.600   Max.   :2.6000  
+    lbdneno          lbdeono          lbdbano           lbxrbcsi    
+ Min.   : 0.200   Min.   :0.0000   Min.   :0.00000   Min.   :2.610  
+ 1st Qu.: 2.800   1st Qu.:0.1000   1st Qu.:0.00000   1st Qu.:4.260  
+ Median : 3.900   Median :0.1000   Median :0.00000   Median :4.500  
+ Mean   : 4.254   Mean   :0.1987   Mean   :0.04506   Mean   :4.499  
+ 3rd Qu.: 5.300   3rd Qu.:0.2000   3rd Qu.:0.10000   3rd Qu.:4.730  
+ Max.   :15.400   Max.   :2.4000   Max.   :1.10000   Max.   :6.430  
+     lbxhgb          lbxhct         lbxmcvsi          lbxmc      
+ Min.   : 6.20   Min.   :21.70   Min.   : 58.30   Min.   :28.70  
+ 1st Qu.:12.40   1st Qu.:36.60   1st Qu.: 82.40   1st Qu.:33.40  
+ Median :13.10   Median :38.60   Median : 86.90   Median :33.90  
+ Mean   :13.14   Mean   :38.74   Mean   : 86.33   Mean   :33.91  
+ 3rd Qu.:13.90   3rd Qu.:40.90   3rd Qu.: 90.80   3rd Qu.:34.40  
+ Max.   :16.70   Max.   :50.30   Max.   :117.30   Max.   :37.00  
+     lbxrdw         lbxpltsi        lbxmpsi     
+ Min.   :10.60   Min.   : 51.0   Min.   : 5.50  
+ 1st Qu.:12.00   1st Qu.:248.0   1st Qu.: 7.30  
+ Median :12.50   Median :295.0   Median : 7.80  
+ Mean   :12.73   Mean   :302.8   Mean   : 7.88  
+ 3rd Qu.:13.10   3rd Qu.:346.0   3rd Qu.: 8.40  
+ Max.   :26.90   Max.   :999.9   Max.   :13.50  
+"

@@ -1,0 +1,4 @@
+"0","```r
+my_own_data <- read.csv(\"Data_Files/NHANES_FeMarkers_3to5y.csv\")
+summary(my_own_data)
+```"

@@ -1,0 +1,8 @@
+"0","ggplot(nhanes_fe, aes(x = race_ethn)) +"
+"0","  geom_bar(aes(fill = gender), alpha = 0.8, position = ""dodge"") +"
+"0","  theme_bw() +"
+"0","  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5), "
+"0","        legend.position = ""top"", text = element_text(size = 14)) +"
+"0","  labs(x = """") +"
+"0","  coord_flip() +"
+"0","  scale_fill_manual(values = c(""dodgerblue2"", ""darkorange1""))"

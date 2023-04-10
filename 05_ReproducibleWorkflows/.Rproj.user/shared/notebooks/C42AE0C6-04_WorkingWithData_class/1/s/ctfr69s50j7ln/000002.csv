@@ -1,0 +1,10 @@
+"1","
+
+|Function       |Coerces to |
+|:--------------|:----------|
+|as.numeric()   |numeric    |
+|as.character() |character  |
+|as.factor()    |factor     |
+|as.logical()   |logical    |
+|as.Date()      |date       |
+"

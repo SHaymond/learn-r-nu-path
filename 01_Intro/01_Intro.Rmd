@@ -1,0 +1,144 @@
+---
+title: "INTRO TO R AND RSTUDIO"
+subtitle: |
+  | NU Pathology LearnR! Fall 2020 
+  | Session 1
+output: 
+  html_document:
+    theme: cosmo
+    toc: yes
+    toc_float: true
+  html_notebook: cosmo
+---
+
+
+## Lesson Outcomes  
+ - Describe R, RStudio, and R Notebooks.
+ - Navigate around the key features of RStudio.
+ - Interact with R by writing and executing code and reviewing output.
+ - Manage your R environment.
+ - Discuss concepts of base R and its extended packages.
+ - Install and invoke R packages.
+ - Seek help for questions or troubleshooting.
+
+## What is R?
+ - An open source, scripting computer language
+ - Descends from S language, designed by statisticians, so works great for data wrangling, analysis, and visualization
+ - Continuously evolving due to active and diverse user base in industry, academia, RStudio, etc.  
+  
+In this series of sessions, we will learn basic skills for how to use R for the key components of data science workflows.  
+  
+  
+*Figure from R for Data Science by Garrett Grolemund and Hadley Wickham.*  
+```{r, echo=FALSE}
+knitr::include_graphics("images/Rdata-science.png")
+```
+ 
+
+## What do we need to use R?
+### R software  
+ - Download R from CRAN, the comprehensive R archive network  
+ https://cloud.r-project.org/  
+ - Use R with Anaconda    
+ https://docs.anaconda.com/anaconda/user-guide/tasks/using-r-language/  
+ - Use institutional distribution of R  
+
+### R packages  
+Packages are fundamental units of reproducible R code. They contain reusable functions, documentation describing their use, and often, sample data.  
+  
+ - Installed with R (base R)
+ - Downloaded from CRAN (The Comprehensive R Archive Network)  
+ https://gallery.shinyapps.io/087-crandash/
+
+### Decide how you will write and execute code  
+ - at the command line  
+ - within an integrated development environment (IDE) – RStudio*  
+*Download RStudio from https://www.rstudio.com/products/rstudio/download/
+
+> "RStudio gives you a way to talk to your computer. R gives you a language to speak in."  
+> *-- Garrett Grolemund*
+
+
+## Let’s get acquainted with RStudio's key components  
+ - Console
+ - Environment/history tabs
+ - Files/plots/packages/help/viewer tabs
+ - Custom settings – colors, font size, save workspace to 'Never'
+ - Open a new R file or project
+ - Search function
+ - Keyboard shortcuts
+
+## Working in the console
+ - Using the command line
+ - Examining output at the prompt
+ - Executing code
+ - Completing/terminating code: + sign
+
+## What are all of these types of R files?
+ - R script
+ - R notebook
+ - R markdown
+ - Others
+
+## What is an R project?
+R projects are a nice feature that promotes reproducible data analysis workflows. It is a system that keeps all files for a given analysis together: input data, R scripts, analytical results, figures, etc. We have developed this course as an R project and recommend that you start all future analyses as an R project.  
+
+
+## Using an R script file
+
+We're about to open a new R Script file. This creates a place where we can write and save R code. If we execute any code in this file, we'll see that it also shows up in the console and creates changes within our environment (in various RStudio panels). We can run the entire file of code, just chunks, or even parts of the code. There are several ways to execute code. When we are finished writing our script, we save the file and this allows us to rerun the same code again in the future.
+
+It's a great idea to include notes (comments) to our future selves and others who may read our code. We may also have lines of code that we don't want to execute in a particular file. We can let R know to treat these differently using # to 'comment' out a line or section of code.  
+
+We can use R as a basic calculator or rely on its built in or extended framework of packages to do really anything. 
+
+R follows these basic rules or algebra.
+
+| Operation      | Expression  | R Code  |
+|:--------------:|:-----------:|:-------:|
+| Addition       | $x + y$     | `x + y` |
+| Subtraction    | $x - y$     | `x - y` |
+| Multiplication | $x\times y$ | `x * y` |
+| Division       | $x\div y$   | `x / y` |
+| Exponents      | $x^y$       | `x^y` or `x**y`   |
+| Logarithm      | $\log(x)$   | `log(x)`|
+| Exponential    | $e^x$       | `exp(x)`|
+| Trig Functions | $\sin(x)$   | `sin(x)`|
+
+
+There are many other useful built-in (base) functions in R. These include:
+
+* `abs(x)`
+* `sqrt(x)`
+* `mean(x)`
+* `round(x, digits = n)`
+* `signif(x, digits = n)`
+* `seq(1.5, 4, by = 0.5)`
+* `length(x)`
+* `is.na(x)`
+* `max(x)`
+* `plot(x,y)`
+
+The R user community is very active in extending the capabilities of R by developing packages. We have to install these extended packages and let R know we are ready to use their functions. Whether using base or other packages, functions in R work on R objects, which we create and name. We'll see that we use the special operator `->` to create and name variables.  
+  
+> “You can name an object in R almost anything you want, but there are a few rules.  
+> First, a name cannot start with a number.  
+> Second, a name cannot use some special symbols, like ^, !, $, @, +, -, /, or *:  
+> Third, R object names are case sensitive so Name is not the same as name.”   
+
+Snake case is a popular (and recommended) convention for naming objects with multiple words. In snake case, lowercase words are separated by _: how_to_use_snake_case  
+
+If we want to create a new variable called, new_var, that is a series of integers from 0 to 10, we can do this by writing the following code:  
+`new_var <- seq(0, 10, 1)`
+
+## Basics of R using R scripts
+1. Write a comment with your code
+2. Use R as a basic calculator
+3. Assign/remove values to/from R objects (variables)
+4. Use functions available in base R
+5. Install and use functions from R packages
+
+## Your Turn:  
+Let's practice these basics now. Open a new R script.  
+
+

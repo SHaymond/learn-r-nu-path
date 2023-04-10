@@ -1,0 +1,8 @@
+"0","```r
+```r
+## Solution
+mk8_list <- list(racer = list(\Mario\, \Princess Peach\, \Wario\, \Baby Luigi\), 
+                 wt = list(\middle\, \middle\, \heavy\, \light\),
+                 speed = list(3.75, 3.25, 4.75, 2.25))
+```
+```"

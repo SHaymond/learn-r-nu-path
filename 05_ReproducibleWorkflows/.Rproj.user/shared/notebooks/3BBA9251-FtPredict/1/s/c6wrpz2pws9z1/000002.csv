@@ -1,0 +1,4 @@
+"0","```r
+plot_bar(data.1to3) 
+plot_histogram(data.1to3) 
+```"

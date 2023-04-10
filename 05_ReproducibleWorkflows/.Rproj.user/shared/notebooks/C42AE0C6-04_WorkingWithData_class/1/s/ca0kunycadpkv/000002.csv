@@ -1,0 +1,8 @@
+"0","```r
+```r
+# Do the numbers of samples collected change over the week?
+ggplot(nhanes_data_clean, aes(x = wday(Collected_t, label = TRUE))) + 
+  geom_bar() +
+  labs(x = \Day of Week\, y = \Subjects Collected\) # make labels more informative
+```
+```"

@@ -1,0 +1,9 @@
+"0","install.packages(\"readxl\")
+library(readxl)
+
+ex1_data <- read_excel(\"ex1.xls\")
+
+#alternatively, this also works
+ex1_data <- read_xls(\"ex1.xls\")
+
+# From the package documentation: read_excel() calls excel_format() to determine if path is xls or xlsx, based on the file extension and the file itself, in that order. Use read_xls() and read_xlsx() directly if you know better and want to prevent such guessing."

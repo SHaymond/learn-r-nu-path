@@ -1,0 +1,6 @@
+"0","```r
+## SOLUTION
+getwd() #finds your current working directory
+dir.create(\"My_Plots\") #creates new folder
+ggsave(\"My_Plots/my_plot.png\", width = 5, height = 3.5)
+```"

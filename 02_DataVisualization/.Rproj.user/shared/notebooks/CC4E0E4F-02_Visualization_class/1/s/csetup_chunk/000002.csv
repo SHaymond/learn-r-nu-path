@@ -1,0 +1,4 @@
+"0","knitr::opts_chunk$set(echo = TRUE)"
+"0","knitr::opts_chunk$set(dev='png', fig.align = 'center', fig.height = 4, fig.width = 6) "
+"0","library(tidyverse)"
+"0",""
